@@ -30,3 +30,15 @@ function fitVideo() {
     $('#video-viewport').scrollTop(($('video').height() - $('.fullsize-video-bg').height()) / 2);
 
 };
+
+
+$('#accordion-main .panel.panel-default').on('click', function (e) {
+    $('#accordion-main .panel.panel-default').removeClass('active');
+    var $this = $(this);
+    if (!$this.hasClass('active')) {
+        $this.addClass('active');
+    }
+    e.preventDefault();
+});
+
+
