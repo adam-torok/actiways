@@ -1,140 +1,77 @@
-* {    -webkit-transition-delay: 1s,1.3s;
-	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-	font-family: 'Ubuntu', sans-serif;-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
-*:before, *:after { -webkit-box-sizing: inherit; -moz-box-sizing: inherit; box-sizing: inherit; }
-
-html { background: #000; font: normal 1em/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif; color: #fff; text-align: center; height: 100%; }
-body { height: 100%; }
-
-#video-viewport {position: absolute;top: 0;left: 0;width: 100%;height: 100%;overflow: hidden;z-index: -1;}
-video { display: block; width: 100%; height: auto; }
-
-.fullsize-video-bg {height: 100%;overflow: hidden;}
-
-.fullsize-video-bg:before {content: "";background: rgba(237,21,86,.35);position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: 0;}
-.fullsize-video-bg:after {content: "";background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAADCAYAAABWKLW/AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDY3IDc5LjE1Nzc0NywgMjAxNS8wMy8zMC0yMzo0MDo0MiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUgTWFjaW50b3NoIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI4RkZBQTgzNzg1NzExRTU4NTQyODc3OUM4MTZGMUREIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI4RkZBQTg0Nzg1NzExRTU4NTQyODc3OUM4MTZGMUREIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MjhGRkFBODE3ODU3MTFFNTg1NDI4Nzc5QzgxNkYxREQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MjhGRkFBODI3ODU3MTFFNTg1NDI4Nzc5QzgxNkYxREQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz66uHInAAAAIUlEQVR42mL5//8/AyMj42YGIGBigABfEMEIkoEBgAADAKvuBwVS8BAjAAAAAElFTkSuQmCC);background-size: 3px 3px;position: absolute;top: 0;left: 0;width: 100%;height: 100%;z-index: 1;}
-
-
-.fullsize-video-bg .inner {display: table;width: 100%;max-width: 41em;display: flex;height: 95%;margin: 0 auto;padding: 0;position: relative;z-index: 2;text-shadow: 0 1px 5px rgba(0,0,0,.5);justify-content: center;align-items: center;}
-.fullsize-video-bg .inner > div { text-align: center; display: table-cell; vertical-align: middle; padding: 0 2em; }
-
-
-h1 { font-family: 'Ubuntu', sans-serif;}
-
-li{
-	color: gray;
+body{
+	margin: 0; height: 100%; overflow: hidden;
+	scroll-behavior: smooth;
+	overflow: auto;
+	scroll-snap-type: mandatory;
 }
+
+.temp{
+	height: 20vw;
+}
+
 
 .logo{
-    width: 100px;
+	width: 70px;
+	margin-top: 50px;
 }
 
-.asd{
-		background: white;
-		display: block;
-		margin: 0 auto;
-		box-shadow: 0 20px 25px -5px rgba(0,0,0,.1), 0 0 10px -5px rgba(0,0,0,.04);
-		border-radius: 20px;
-		border-bottom-right-radius: 0;
-		margin-top: 50px;
-		text-align: center;
-	
+.icoo{
+	background: #ed1556;
 }
 
-/* Accordion style */
-.cbp-ntaccordion {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+.shadow-lg{
+	box-shadow: 0 10px 15px -3px rgba(237, 21, 86, 0.1), 0 4px 6px -2px rgba(237, 21, 86, 0.05);
+}
+section{
+	scroll-snap-align: start;
 }
 
-.cbp-ntsubaccordion {
-	list-style: none;
+.maincont{
+	margin-bottom: 100px;
 }
 
-.cbp-ntaccordion .cbp-nttrigger {
-    cursor: pointer;
-    color: #ed1556;
-} 
-
-.cbp-ntaccordion h3 {
-	margin: 0 0 0.3em;
-	padding: 1em 0 0.5em;
-	border-bottom: 1px solid #ddd;
-	font-size: 1.5rem;
-	font-weight: 300;
+.sticky{
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0;
+	z-index: 3;
 }
 
-.cbp-ntaccordion h4 {
-	font-size: 1.2em;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
-	padding: 0.5em 0 0.5em;
-	margin: 0 0 0.5em;
+.logoname{
+	width: 202px;
 }
 
-.cbp-ntaccordion h5 {
-	font-size: 1.2em;
-	color: #aaa;
-	padding: 0.5em 0 0.5em;
-	margin: 0 0 0.5em;
+.transparent{
+	background: none;
 }
 
-.cbp-ntaccordion .cbp-ntcontent p {
-	color: #888;
-	font-size: 1rem;
-	font-weight: 300;
-	line-height: 1.5;
-	padding: 0.2em 0 1.5em;
-	margin: 0;
+.logo-container {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+	background: white;
+	margin-top: 5px;
+    height: 147px;
+    width: 100vw;
 }
 
-/* Arrow icons */
-.cbp-ntaccordion > li > .cbp-nttrigger:before,
-.cbp-ntsubaccordion > li > .cbp-nttrigger:before {
-	font-family: 'icomoon';
-	speak: none;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	color: #ddd;
-	margin-right: 0.5em;
-	-webkit-font-smoothing: antialiased;
+video{
+	position: fixed;
+	top: 32%;
+	left: 50%;
+	/* min-width: 100%; */
+	/* min-height: 100%; */
+	width: auto;
+	z-index: -100;
+	transform: translateX(-50%) translateY(-50%);
+	transition: 1s opacity;
+	/* position: fixed; */
 }
-
-.cbp-ntaccordion > li > .cbp-nttrigger:before {
-	font-size: 75%;
+ 
+.fixed {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
-
-
-/* Initial height is zero */
-.cbp-ntaccordion .cbp-ntcontent {
-	height: 0;
-	overflow: hidden;
-}
-
-/* When open, set height to auto */
-.cbp-ntaccordion .cbp-ntopen > .cbp-ntcontent,
-.cbp-ntsubaccordion .cbp-ntopen > .cbp-ntcontent,
-.no-js .cbp-ntaccordion .cbp-ntcontent {
-	height: auto;
-	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
-
-}
-
-/* Example for media query */
-@media screen and (max-width: 32em) { 
-
-	.cbp-ntaccordion {
-		font-size: 70%;
-	}
-
-}
-
-
-@import "tailwindcss/base";
-
-@import "tailwindcss/components";
-
-@import "tailwindcss/utilities";

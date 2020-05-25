@@ -1,8 +1,33 @@
-$(window).on('load',function(){
+
+
+
+  $(document).ready(function() {
+	  console.log("hii");
+
+    $(window).scroll(function() {
+		console.log("hii");
+		
+        var distanceFromTop = $(document).scrollTop();
+        if (distanceFromTop >= $('#header').height())
+        {
+            $('#sticky').fadeIn(400).addClass('fixed');
+        }
+        else
+        {
+            $('#sticky').fadeOut(400).removeClass('fixed');
+        }
+    });
+});
+
+    function toggleNavbar(collapseID) {
+      document.getElementById(collapseID).classList.toggle("hidden");
+      document.getElementById(collapseID).classList.toggle("block");
+    }
+
+
     $(".cbp-nttrigger").on('click',function(){
         $(this).find('img').toggleClass("headShake");        
     })
-})
 
 var min_w = 300;
 var vid_w_orig;
@@ -138,3 +163,4 @@ console.log("yes");
 	};
 
 } )( jQuery, window );
+
